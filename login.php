@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 ?>
 <?php include 'inc/header.php'; ?>
 <form class="booking-form my-4" role="form" action="login.php" method="post">
-<a href="index.php" class="mx-4 fs-5">Go back</a>
+<span class="mx-4 fs-5">Don't have an account?<a href="index.php" class="mx-2">Register</a></span>
 <h2 class="mx-4">Login Form</h2>
     <?php if (!empty($errors)): ?>
         <div class="alert alert-danger col-8 mx-4">
