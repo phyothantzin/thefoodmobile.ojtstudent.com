@@ -75,10 +75,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 					</div>
 				<?php endif; ?>
 				<img style="width: 15rem" src='<?php echo $product['image']; ?>'>
-				<form name="testform" method="POST" enctype="multipart/form-data"  >
-			<table style="border-color:#000000;border-style: dotted;" width="600px" align="left">
-				
-						
+				<form name="testform" method="POST" enctype="multipart/form-data" class='my-4'>
+			<table style="border-color:#000000;border-style: dotted;" width="600px" align="left">	
 				
 				 <tr>
 						<td height="20px"></td>
