@@ -57,7 +57,7 @@ mysqli_close($conn);
 						
 				
 				 <tr>
-						<td height="20px"></td>
+					<td height="20px"></td>
 				</tr>	
 				<tr>
 				<td><span class="style3">Image:</span></td>
@@ -72,7 +72,7 @@ mysqli_close($conn);
 				<tr>
 				  <td><span class="style3">product name: </span></td>
 				  <td><label>
-					<input name="t1" type="text" id="t1">
+					<input style='margin-top: 12px;' name="t1" type="text" id="t1">
 				  </label></td>
 				</tr>
 				 <tr>
@@ -92,7 +92,7 @@ mysqli_close($conn);
 				<tr>
 				  <td><span class="style3">Type:</span></td>
 				  <td><label>
-					<input name="t3" type="text" id="t3">
+					<input  style='margin-top: 15px;' name="t3" type="text" id="t3">
 				  </label></td>
 				</tr>
 				 <tr>
@@ -136,10 +136,10 @@ mysqli_close($conn);
         
         <div class="clear"></div>
         <div id="tooplate_copyright">
-			Copyright © 2023 The Food Mobile
+			Copyright © 2023 The Food Mobile 
 		</div>
-    </div>
-</div>
+    </div> <!-- END of tooplate_footer -->
+</div> <!-- END of tooplate_footer_wrapper -->
 <?php
 }
 ?>
