@@ -14,10 +14,9 @@ $products = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
 <?php include 'inc/header.php'; ?>
 	<h2 align="center"> View Product </h2>
-            <table style='border-color:#000000;border-style: solid;position:relative; right: 100px' width='1050px' >
+            <table align="center" style='border-color:#000000;border-style: solid;position:relative;' width='850px' >
                 <tr>
                     <td>Image</td>
-                    <td>Product No</td>
                     <td>Price</td>
                     <td>Type</td>
                     <td>Actions</td>
@@ -26,18 +25,17 @@ $products = mysqli_fetch_all($result, MYSQLI_ASSOC);
             <?php foreach ($products as $product): ?> 
                 <tr>
                 <td height='280' width='240' align='center'>
+                	<?php echo $product['name']; ?>
                     <img src='<?php echo $product[
                         'image'
                     ]; ?>' height='200' width='200'>
                 </td><b> 
-                <td>
-                    <?php echo $product['name']; ?>
-                </td> 
+                
                 <td width='240'>
                 <?php echo $product['price']; ?>
                     kyats 
                 </td>
-                <td width='200'>
+                <td width='120'>
                     <?php echo $product['type']; ?>
                 </td> 
                 <td width='240'>
@@ -72,14 +70,9 @@ $products = mysqli_fetch_all($result, MYSQLI_ASSOC);
 				  <li><a href="logout.php">Log out</a></li>
             </ul>
         </div>
-        
-        
-        
-         
-        
         <div class="clear"></div>
         <div id="tooplate_copyright">
-			Copyright © 2023 The Food Mobile
+			Copyright © 2023 The Food Mobile 
 		</div>
     </div> <!-- END of tooplate_footer -->
 </div> <!-- END of tooplate_footer_wrapper -->
