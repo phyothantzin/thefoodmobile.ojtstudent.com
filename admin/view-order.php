@@ -14,28 +14,26 @@ $products = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
 <?php include 'inc/header.php'; ?>
 	<h2 align="center"> View Orders </h2>
-            <table style='border-color:#000000;border-style: solid;position:relative; right: 100px' width='1050px' >
+            <table align="center" style='border-color:#000000;border-style: solid;' width='850px' >
                 <tr>
                     <td>Image</td>
-                    <td>Product No</td>
                     <td>Price</td>
                     <td>Ordered By</td>
                     <td>Ordered At</td>
-					<td>Status</td>
+			        <td>Status</td>
                     <td>Actions</td>
                 </tr>
         
             <?php foreach ($products as $product): ?> 
                 <tr>
-                <td height='280' width='240' align='center'>
+                <td height='280' width='240' align='center' class='px-4'>
+                	<?php echo $product['name']; ?>
                     <img src='<?php echo $product[
                         'image'
                     ]; ?>' height='200' width='200'>
                 </td><b> 
-                <td>
-                    <?php echo $product['name']; ?>
-                </td> 
-                <td width='240'>
+
+                <td width='280'>
                 <?php echo $product['price']; ?>
                     kyats 
                 </td>
@@ -45,10 +43,10 @@ $products = mysqli_fetch_all($result, MYSQLI_ASSOC);
                 <td width='200'>
                     <?php echo $product['time']; ?>
                 </td> 
-				<td width='200'>
+		<td width='200'>
                     <?php echo $product['status']; ?>
                 </td> 
-                <td width='240'>
+                <td width='240' class='px-4'>
                     <!-- <a href="update.php?id=" class="btn btn-outline-primary">Update</a> -->
 					<form class="py-1" method="post" action="status.php" style="display: inline-block">
                         <input type="hidden" name="id" value="<?php echo $product[
